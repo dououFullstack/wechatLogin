@@ -1,0 +1,42 @@
+<template name="profile">
+  {{#if currentUser}}
+    <h3>已经登录</h3>
+    {{> userinfo}}
+  {{else}}
+    <h3 class="text-center">您尚未登录</h3>
+    <a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx63afd8910ac82737&redirect_uri=http://127.0.0.1:3000/wechatLogin&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect">
+      <button class="btn btn-primary btn-block">使用微信登录</button>
+    </a>
+  {{/if}}
+</template>
+
+<template name="userinfo">
+  {{#with currentUser}}
+    <a href="#" class="thumbnail">
+      <img src="{{profile.headimgurl}}" alt="headimgurl">
+    </a>
+    <table class="table table-striped">
+      <caption>条纹表格布局</caption>
+      <thead>
+        <tr>
+           <th>属性</th>
+           <th>值</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+           <td>nickname</td>
+           <td>{{profile.nickname}}</td>
+        </tr>
+        <tr>
+           <td>country</td>
+           <td>{{profile.country}}</td>
+        </tr>
+        <tr>
+           <td>sex</td>
+           <td>{{getSex profile.sex}}</td>
+        </tr>
+      </tbody>
+    </table>
+  {{/with}}
+</template>

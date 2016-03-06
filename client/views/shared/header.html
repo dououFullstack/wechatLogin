@@ -17,6 +17,8 @@
           <li class="{{active 'documentsIndex'}}"><a href="{{pathFor 'documentsIndex'}}">Documents</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
+          <li><a>{{> loginButtons}}</a></li>
+          <li><a href="{{pathFor 'profile'}}">Profile</a></li>
           <li class="{{active 'about'}}"><a href="{{pathFor 'about'}}">About</a></li>
           <li><a href="https://github.com/kjetilhau/meteor-skeleton">Github</a></li>
         </ul>
