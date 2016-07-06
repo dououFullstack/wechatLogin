@@ -13,7 +13,6 @@ alanning:roles
 accounts-base
 twbs:bootstrap
 momentjs:moment
-standard-minifiers
 meteor-base
 mobile-experience
 mongo
@@ -31,3 +30,5 @@ accounts-ui
 accounts-password
 http
 sacha:spin
+standard-minifier-css
+standard-minifier-js
